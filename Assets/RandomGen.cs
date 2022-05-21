@@ -8,6 +8,7 @@ public class RandomGen : MonoBehaviour
     public GameObject car;
     private int nb = 0;
     public float speed = 0.1f;
+    public SpriteRenderer rend;
 
     void init_car()
     {
@@ -30,5 +31,9 @@ public class RandomGen : MonoBehaviour
             car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
         else
             init_car();
+        if (car.transform.position.y == -2.7f)
+            rend.sortingOrder = 2;
+        else 
+            rend.sortingOrder = 0;
     }
 }

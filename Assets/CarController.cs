@@ -10,11 +10,12 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0) {
-            player.transform.position = new Vector2(0.01f, -1.6f);
-    } 
- else if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0) {
-            player.transform.position = new Vector2(0.01f, -2.7f);
-    }
+        //if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0)
+        //    player.transform.position.x += 0.1f;
+        //if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0)
+        //    player.transform.position = new Vector2(0.01f, -1.6f);
+        //else if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0)
+        //    player.transform.position = new Vector2(0.01f, -2.7f);
+        
     }
 }
