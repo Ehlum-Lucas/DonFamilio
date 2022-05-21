@@ -13,9 +13,9 @@ public class CarController : MonoBehaviour
         //if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0)
         //    move = true;
         if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0)
-            player.transform.position = new Vector2(0.01f, -1.6f);
+            player.transform.position = new Vector2(-6.8f, -1.4f);
         else if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0)
-            player.transform.position = new Vector2(0.01f, -2.7f);
+            player.transform.position = new Vector2(-6.8f, -2.6f);
         //while (move == true)
         //    player.transform.position = player.transform.position + new Vector3(0.1f, 0, 0);
     }

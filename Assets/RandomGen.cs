@@ -13,11 +13,18 @@ public class RandomGen : MonoBehaviour
     void init_car()
     {
         nb = Random.Range(0, 2);
-        Debug.Log(nb);
         if (nb == 1)
-            car.transform.position = new Vector2(7.2f, -2.7f);
+            car.transform.position = new Vector2(7.2f, -2.5f);
         else
-            car.transform.position = new Vector2(7.2f, -1.6f);
+            car.transform.position = new Vector2(7.2f, -1.4f);
+    }
+
+    void order()
+    {
+        if (car.transform.position.y == -2.5f)
+            rend.sortingOrder = 2;
+        else
+            rend.sortingOrder = 0;
     }
 
     void Start()
@@ -31,9 +38,13 @@ public class RandomGen : MonoBehaviour
             car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
         else
             init_car();
-        if (car.transform.position.y == -2.7f)
-            rend.sortingOrder = 2;
-        else 
-            rend.sortingOrder = 0;
+        order();
     }
+
+    void OnTriggerEnter2D()
+    {
+        Debug.Log ("AHAHAHA trop nul le type");
+        init_car();
+    }
+
 }
