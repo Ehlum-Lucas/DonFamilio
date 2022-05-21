@@ -26,6 +26,9 @@ public class RandomGen : MonoBehaviour
 
     void Update()
     {
-        car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
+        if (car.transform.position.x > -7.30f)
+            car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
+        else
+            init_car();
     }
 }
