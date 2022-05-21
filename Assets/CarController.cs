@@ -9,6 +9,11 @@ public class CarController : MonoBehaviour
     public bool move = false;
     public int pos;
 
+    void Start()
+    {
+        player.transform.position = new Vector2(-6, -2.7f);
+    }
+
     void Update()
     {
         if (pos == 3)

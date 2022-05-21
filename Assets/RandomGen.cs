@@ -14,16 +14,16 @@ public class RandomGen : MonoBehaviour
     {
         nb = Random.Range(0, 3);
         if (nb == 0)
-            car.transform.position = new Vector2(11, -2.5f);
+            car.transform.position = new Vector2(11, -2.7f);
         else if (nb == 1)
-            car.transform.position = new Vector2(11, -1.4f);
+            car.transform.position = new Vector2(11, -1.6f);
         else
             car.transform.position = new Vector2(11, -0.5f);
     }
 
     void order()
     {
-        if (car.transform.position.y == -2.5f)
+        if (car.transform.position.y == -1.6f || car.transform.position.y == -0.5f)
             rend.sortingOrder = 2;
         else
             rend.sortingOrder = 0;
