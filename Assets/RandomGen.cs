@@ -26,7 +26,7 @@ public class RandomGen : MonoBehaviour
         if (car.transform.position.y == -1.6f || car.transform.position.y == -0.5f)
             rend.sortingOrder = 2;
         else
-            rend.sortingOrder = 0;
+            rend.sortingOrder = 2;
     }
 
     void Start()
