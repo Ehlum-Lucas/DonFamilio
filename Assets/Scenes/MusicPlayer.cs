@@ -14,7 +14,7 @@ public class MusicPlayer : MonoBehaviour
 
     private AudioClip GetRandomClip()
     {
-        return clips[Random.Range(0, 15)];
+        return clips[Random.Range(0, 16)];
     }
 
     void Update()
