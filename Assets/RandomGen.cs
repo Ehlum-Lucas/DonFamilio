@@ -12,11 +12,13 @@ public class RandomGen : MonoBehaviour
 
     void init_car()
     {
-        nb = Random.Range(0, 2);
-        if (nb == 1)
-            car.transform.position = new Vector2(7.2f, -2.5f);
+        nb = Random.Range(0, 3);
+        if (nb == 0)
+            car.transform.position = new Vector2(11, -2.5f);
+        else if (nb == 1)
+            car.transform.position = new Vector2(11, -1.4f);
         else
-            car.transform.position = new Vector2(7.2f, -1.4f);
+            car.transform.position = new Vector2(11, -0.5f);
     }
 
     void order()
@@ -34,7 +36,7 @@ public class RandomGen : MonoBehaviour
 
     void Update()
     {
-        if (car.transform.position.x > -7.30f)
+        if (car.transform.position.x > -10)
             car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
         else
             init_car();
