@@ -21,6 +21,8 @@ public class bkg_parallax : MonoBehaviour
             length = GetComponent<SpriteRenderer>().bounds.size.x * 0.95f;
         else if (parallaxEffect == 4)
             length = GetComponent<SpriteRenderer>().bounds.size.x * 2;
+        else if (parallaxEffect == 1)
+            length = GetComponent<SpriteRenderer>().bounds.size.x * 2;
     }
 
     void FixedUpdate()
