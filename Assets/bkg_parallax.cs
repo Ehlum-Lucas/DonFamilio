@@ -13,7 +13,14 @@ public class bkg_parallax : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x * 2;
+        if (parallaxEffect == 3)
+            length = GetComponent<SpriteRenderer>().bounds.size.x * 2;
+        else if (parallaxEffect == 0)
+            length = GetComponent<SpriteRenderer>().bounds.size.x * 0.60f;
+        else if (parallaxEffect == 2)
+            length = GetComponent<SpriteRenderer>().bounds.size.x * 0.95f;
+        else if (parallaxEffect == 4)
+            length = GetComponent<SpriteRenderer>().bounds.size.x * 2;
     }
 
     void FixedUpdate()
@@ -24,6 +31,6 @@ public class bkg_parallax : MonoBehaviour
         if (temp > startpos + length) startpos += length;
         else if (temp < startpos - length) startpos -= length;
 
-        startpos -= (Time.deltaTime * speed) / 2;
+        startpos -= (Time.deltaTime * speed) / 1.5f;
     }
 }
