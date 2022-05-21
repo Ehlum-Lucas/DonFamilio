@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bkg_parallax : MonoBehaviour
 {
-    [Range(-10f, 10f)]
+    [Range(-10f, 20f)]
     public float speed = 10f;
     private float length, startpos, offset;
     public GameObject cam;
@@ -24,6 +24,6 @@ public class bkg_parallax : MonoBehaviour
         if (temp > startpos + length) startpos += length;
         else if (temp < startpos - length) startpos -= length;
 
-        startpos -= (Time.deltaTime * speed) / 2f;
+        startpos -= (Time.deltaTime * speed) / 2;
     }
 }
