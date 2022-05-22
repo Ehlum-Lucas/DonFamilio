@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class RandomGen : MonoBehaviour
 {
     public GameObject car;
+    private ScoreManager score;
     private int nb = 0;
     public float speed = 0.1f;
     public SpriteRenderer rend;
@@ -32,6 +33,7 @@ public class RandomGen : MonoBehaviour
     void Start()
     {
         init_car();
+        score = FindObjectOfType<ScoreManager>();
     }
 
     void Update()

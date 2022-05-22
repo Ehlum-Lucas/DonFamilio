@@ -5,6 +5,7 @@ using UnityEngine;
 public class Family : MonoBehaviour
 {
     public GameObject family;
+    private ScoreManager score;
     private int nb = 0;
     public float speed = 0.07f;
     public SpriteRenderer rend;
@@ -22,7 +23,7 @@ public class Family : MonoBehaviour
 
     void order()
     {
-        if (family.transform.position.y == -3.2f)
+        if (family.transform.position.y == -3.4f)
             rend.sortingOrder = 3;
         else
             rend.sortingOrder = 0;
@@ -31,6 +32,7 @@ public class Family : MonoBehaviour
     void Start()
     {
         init_family();
+        score = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -44,10 +46,13 @@ public class Family : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy"))
+        if (collider.CompareTag("Enemy")) {
             Debug.Log("Ouïe");
-        if (collider.CompareTag("player"))
+        }
+        if (collider.CompareTag("player")) {
             Debug.Log ("Let's gooooo");
+            score.Score += 50;
+        }
         init_family();
     }
 
