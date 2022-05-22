@@ -19,7 +19,7 @@ public class MusicPlayer : MonoBehaviour
 
     void Update()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSource.isPlaying || Input.GetKey(KeyCode.Space))
         {
             audioSource.clip = GetRandomClip();
             audioSource.Play();
