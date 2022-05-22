@@ -32,10 +32,12 @@ public class RandomGen : MonoBehaviour
 
     void order()
     {
-        if (car.transform.position.y == -1.6f || car.transform.position.y == -0.5f)
-            rend.sortingOrder = 2;
+        if (car.transform.position.y == -2.7f)
+            rend.sortingOrder = 7;
+        else if (car.transform.position.y == -1.6f)
+            rend.sortingOrder = 4;
         else
-            rend.sortingOrder = 2;
+            rend.sortingOrder = 1;
     }
 
     void Start()

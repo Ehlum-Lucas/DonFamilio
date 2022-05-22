@@ -34,6 +34,8 @@ public class Family : MonoBehaviour
     void order()
     {
         if (family.transform.position.y == -3.4f)
+            rend.sortingOrder = 6;
+        else if (family.transform.position.y == -2.5f)
             rend.sortingOrder = 3;
         else
             rend.sortingOrder = 0;
