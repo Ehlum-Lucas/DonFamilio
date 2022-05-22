@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 545636bfd91e76a1b9459e1fb4ae6bdd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pixel Musketeer
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b2de969f8e3540f1ba67f28685b62e43, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
