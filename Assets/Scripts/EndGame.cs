@@ -1,12 +1,19 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EndGame
+public class EndGame : MonoBehaviour
 {
-    public void SceneGame()
+    public void PlayAgain()
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
