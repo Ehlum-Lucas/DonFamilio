@@ -7,7 +7,9 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText1;
     public TextMeshProUGUI HighScoreText;
+    public TextMeshProUGUI HighScoreText1;
 
     public float Score;
     public float HighScore;
@@ -36,11 +38,15 @@ public class ScoreManager : MonoBehaviour
             Speed = 0;
             enemy.speed *= 1.1f;
         }
-        if (is_score)
+        if (is_score) {
             Score += PtsPerSecond * Time.deltaTime;
+        }
         if (HighScore < Score)
             HighScore = Score;
         scoreText.text = "Score : " + Mathf.Round(Score);
+        scoreText1.text = "Score : " + Mathf.Round(Score);
         HighScoreText.text = "High Score : " + Mathf.Round(HighScore);
+        HighScoreText1.text = "High Score : " + Mathf.Round(HighScore);
+
     }
 }
