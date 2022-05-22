@@ -11,6 +11,7 @@ public class RandomGen : MonoBehaviour
     private int nb = 0;
     public float speed = 0.1f;
     public SpriteRenderer rend;
+    EndGame endgame = new EndGame();
 
     private Sprite Get_Random_Sprite()
     {
@@ -52,9 +53,12 @@ public class RandomGen : MonoBehaviour
         order();
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        // Debug.Log ("AHAHAHA trop nul le type");
+        if (collider.CompareTag("player")) {
+            Debug.Log ("AHAHAHA trop nul le type");
+            endgame.SceneGame();
+        }
         init_car();
     }
 
