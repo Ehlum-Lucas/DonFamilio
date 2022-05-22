@@ -47,7 +47,7 @@ public class RandomGen : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-        Debug.Log ("AHAHAHA trop nul le type");
+        // Debug.Log ("AHAHAHA trop nul le type");
         init_car();
     }
 
