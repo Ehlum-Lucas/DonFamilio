@@ -47,7 +47,10 @@ public class RandomGen : MonoBehaviour
     void Update()
     {
         if (car.transform.position.x > -10)
-            car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
+            if (speed < 0.5f)
+                car.transform.position = car.transform.position + new Vector3(-speed, 0, 0);
+            else
+                car.transform.position = car.transform.position + new Vector3(-0.5f, 0, 0);
         else
             init_car();
         order();

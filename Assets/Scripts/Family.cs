@@ -16,7 +16,7 @@ public class Family : MonoBehaviour
 
     private Sprite Get_Random_Sprite()
     {
-        return sprite[Random.Range(0, 3)];
+        return sprite[Random.Range(0, 6)];
     }
 
     void init_family()
@@ -54,9 +54,13 @@ public class Family : MonoBehaviour
         else {
             acceleration = 0;
             speed *= 1.1f;
+            Debug.Log(speed);
         }
         if (family.transform.position.x > -11)
-            family.transform.position = family.transform.position + new Vector3(-speed, 0, 0);
+            if (speed < 0.35f)
+                family.transform.position = family.transform.position + new Vector3(-speed, 0, 0);
+            else
+                family.transform.position = family.transform.position + new Vector3(-0.35f, 0, 0);
         else
             init_family();
         order();
