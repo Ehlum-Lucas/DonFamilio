@@ -5,14 +5,21 @@ using UnityEngine.UI;
 
 public class RandomGen : MonoBehaviour
 {
+    public Sprite[] sprite;
     public GameObject car;
     private ScoreManager score;
     private int nb = 0;
     public float speed = 0.1f;
     public SpriteRenderer rend;
 
+    private Sprite Get_Random_Sprite()
+    {
+        return sprite[Random.Range(0, 10)];
+    }
+
     void init_car()
     {
+        car.gameObject.GetComponent<SpriteRenderer>().sprite = Get_Random_Sprite();
         nb = Random.Range(0, 3);
         if (nb == 0)
             car.transform.position = new Vector2(11, -2.7f);

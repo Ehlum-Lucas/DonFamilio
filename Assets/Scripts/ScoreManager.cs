@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
         }
         else {
             Speed = 0;
-            enemy.speed *= 1.4f;
+            enemy.speed *= 1.1f;
         }
         if (is_score)
             Score += PtsPerSecond * Time.deltaTime;

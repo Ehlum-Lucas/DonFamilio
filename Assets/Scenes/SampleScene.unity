@@ -2474,6 +2474,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2966df3bbf7a419bd08e863da89109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 21300000, guid: 9bef39ef8e6fd4d42bccf103609af17e, type: 3}
+  - {fileID: 21300000, guid: 1adea44eddc43f140b9d2fe15dc4b6e4, type: 3}
+  - {fileID: 21300000, guid: 30dff9215ed374c42bc5284c870ac976, type: 3}
+  - {fileID: 21300000, guid: 5789a4477a80e0d16ac0889689c6f28a, type: 3}
+  - {fileID: 21300000, guid: 8d0c6888f5aa0a5e1b5666cc98b9eff1, type: 3}
+  - {fileID: 21300000, guid: ea810c1ab9ca2d14db6026ebbe0eba55, type: 3}
+  - {fileID: 21300000, guid: 261a501498e3fc549b605aa66e5fa18d, type: 3}
+  - {fileID: 21300000, guid: 8978f04f6fb5d6028a0e29e89e5e4348, type: 3}
+  - {fileID: 21300000, guid: 0b18f8c0c39d7764ab0efff518d57cc7, type: 3}
+  - {fileID: 21300000, guid: 5433450725995b24ba1208ffac4594bf, type: 3}
   car: {fileID: 795343152}
   speed: 0.1
   rend: {fileID: 795343156}
@@ -2644,6 +2655,7 @@ MonoBehaviour:
   HighScoreText: {fileID: 997113457}
   Score: 10
   HighScore: 100
+  Speed: 0
   PtsPerSecond: 5
   is_score: 1
 --- !u!1 &862910041
@@ -3823,8 +3835,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab03484f56f9abfc487cb5aac9aa23c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite:
+  - {fileID: 21300000, guid: 5f7398d12b246d29abdd90e903fbd2eb, type: 3}
+  - {fileID: 21300000, guid: f910f4ae6bd0caac499fc9a18811b99c, type: 3}
+  - {fileID: 21300000, guid: dd2ba4b5fb5c121f690de8c0e57988d1, type: 3}
   family: {fileID: 1742327962}
   speed: 0.07
+  acceleration: 0
+  PtsPerSecond: 5
   rend: {fileID: 1742327966}
 --- !u!61 &1742327964
 BoxCollider2D:

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Family : MonoBehaviour
 {
+    public Sprite[] sprite;
     public GameObject family;
     private ScoreManager score;
     private RandomGen enemy;
@@ -13,8 +14,14 @@ public class Family : MonoBehaviour
     public float PtsPerSecond = 5;
     public SpriteRenderer rend;
 
+    private Sprite Get_Random_Sprite()
+    {
+        return sprite[Random.Range(0, 3)];
+    }
+
     void init_family()
     {
+        family.gameObject.GetComponent<SpriteRenderer>().sprite = Get_Random_Sprite();
         nb = Random.Range(0, 3);
         if (nb == 0)
             family.transform.position = new Vector2(11, -3.4f);
@@ -46,7 +53,7 @@ public class Family : MonoBehaviour
         }
         else {
             acceleration = 0;
-            speed *= 1.4f;
+            speed *= 1.1f;
         }
         if (family.transform.position.x > -11)
             family.transform.position = family.transform.position + new Vector3(-speed, 0, 0);
